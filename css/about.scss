@@ -1,0 +1,127 @@
+@import "base";
+@import "header";
+@import "key-visual";
+@import "footer";
+
+/*-------------------*/
+/* key-visual
+/*-------------------*/
+.kv-wrapper{
+  background-image: url(../images/heading-img2x.png);
+}
+
+/*-------------------*/
+/* vision
+/*-------------------*/
+#vision{
+  padding-left: 20vw;
+  @include media(sp){
+    padding-left: 4vw;
+  }
+  .sub-title{
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2em;
+    @include media(sp){
+      font-size: 2rem;
+    }
+  }
+  .section-text{
+    line-height: 2em;
+    @include media(tab){
+      font-size: 1.4rem;
+    }
+  }
+}
+/*-------------------*/
+/* CEO MESSAGE
+/*-------------------*/
+#message{
+  position: relative;
+  z-index: -1 !important;
+  .img-area{
+    width: 30%;
+    position: absolute;
+    top: 60px;
+    left: 11vw;
+    @include media(tab){
+      left: 4vw;
+      min-width: 320px;
+    }
+    @include media(sp){
+      left: 0;
+      min-width: 290px;
+
+    }
+  }
+  .message-content{
+    background: #F0F0F0;
+    max-width: 750px;
+    box-sizing: border-box;
+    padding: 120px 185px 90px;
+    margin: 140px 0 0 auto;
+    @include media(tab){
+      max-width: 600px;
+      padding: 110px 8% 78px;
+      margin: 150px 0 0 auto;
+    }
+    @include media(sp){
+      padding: 120px 8% 78px;
+      margin: 130px 0 0 auto;
+
+    }
+
+    .section-text{
+      line-height: 2em;
+      overflow-wrap: normal;
+      @include media(tab){
+        font-size: 1.4rem;
+      }
+    }
+  
+  }
+}
+/*-------------------*/
+/* COMPANY
+/*-------------------*/
+#company-info{
+  .title{
+    padding-bottom: 30px;
+    border-bottom: 1px solid #DDDDDD;
+  }
+  .info-list{
+    display: block;
+    max-width: 700px;
+    margin-left: auto;
+    padding-left: 30px;
+    @include media(tab){
+      font-size: 1.4rem;
+    }
+    @include media(tab){
+      padding-left: 0;
+    }
+    &-item{
+      display: flex;
+      line-height: 56px;
+      border-bottom: 1px solid #DDDDDD;
+      .info-title{
+        width: 140px;
+        font-weight: bold;
+      }
+    }
+  }
+  .map{
+    width: 100%;
+    height: 360px;
+    margin: 40px 0 60px;
+    @include media(tab){
+      height: 230px;
+      margin: 40px 0 20px;
+
+    }
+    @include media(sp){
+      height: 470px;
+    }
+
+  }
+}

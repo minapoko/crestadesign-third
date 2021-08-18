@@ -1,0 +1,136 @@
+/*------------*/
+/* ヘッダー 
+/*------------*/
+
+.header {
+  width: 100vw;
+  position: fixed;
+  top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include media(sp){
+    top: 19px;
+  }
+  .header-logo{
+    width: 289px;
+    padding-left: 4vw;
+    &.black svg path{
+      fill: black;
+      transition: fill .3s;
+    }
+    @include media(tab){
+      width: 189px;
+    }
+  }
+  .header-nav {
+    display: none;
+    position: absolute;
+    top: -30px;
+    right: 0;
+    width: percentage(520px / 1440px);
+    height: 100vh;
+    background-color: #222222;
+    opacity: .9;
+    z-index: 10;
+    @include media(tab){
+      width: 70%;
+    }
+    .nav-list{
+      width: 140px;
+      margin: 20vh auto 0;
+      .nav-item{
+        text-align: center;
+        margin-bottom: 20px;
+        a{
+          color: #fff;
+          font-size: 2rem;
+          font-weight: bolder;
+        }
+      }
+    }
+  }
+  
+  //ハンバーガーボタン
+  .nav-btn{
+    display: flex;
+    align-items: center;
+    border: none;
+    padding: 0 ;
+    margin-right: 58px;
+    cursor: pointer;
+    z-index: 10;
+    background: inherit;
+    color: #fff;
+    @include media(tab){
+      margin-right: 30px;
+    }
+    @include media(sp){
+      margin-right: 10px;
+    }
+    &.black{
+      color: #000;
+    }
+    &:hover{
+      opacity: .7;
+    }
+    .bars{
+      display: block;
+      margin-right: 7px;
+      
+      .bar{
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: #fff;
+        transition: transform .3s, opacity .3s;
+        &.black{
+          background: #000;
+        }
+        &-top{
+          transform: translateY(-4px);
+        }
+        &-middle{
+          opacity: 1;
+        }
+        &-bottom{
+          transform: translateY(4px);
+        }
+      }
+    }
+    .btn-text{
+      font-size: 1rem;
+      font-weight: bolder;
+    }
+    &.btn-close{
+      background: inherit;
+      transition: .3s;
+      color: #fff;
+      .bar{
+        transition: transform .3s, opacity .3s;
+        background: #fff !important;
+        &-top{
+          transform:translateY(2px) rotate(35deg);
+          
+        }
+        &-middle{
+          opacity: 0;
+        }
+        &-bottom{
+          transform:translateY(-2px) rotate(-35deg);
+        }
+      }
+    }
+  }
+  .nav-musk{
+    display: none;
+    position: absolute;
+    top: -30px;
+    width: 100vw;
+    height: 100vh;
+    background-color: #222222;
+    opacity: 0.6;
+    z-index: 8;
+
+  }
+}
